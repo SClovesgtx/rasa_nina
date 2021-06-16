@@ -1,0 +1,62 @@
+version: "2.0"
+
+nlu:
+- intent: General_Greetings
+  examples: |
+    - Boa Noite
+    - Boa tarde
+    - Bom dia
+    - oi
+    - olá
+    - tudo bem?
+    - e aí blz?
+    - dia, pode me ajudar?
+
+- intent: General_Ending
+  examples: |
+    - adeus
+    - até logo
+    - até mais
+    - obrigado
+    - ok, agradecido
+    - tchau
+    - valeu
+    - xau
+    - bye bye
+
+- intent: Reportar_Vazamento
+  examples: |
+    - a loja ao lado da minha casa está com um vazamento interno onde posso reclamar?
+    - está vazando água
+    - Estourou um cano aqui na rua perto de casa
+    - Gostaria de reportar um vazamento
+    - Há um entupimento na rede de esgoto
+    - meu hidrômetro quebrou
+    - Meu vizinho quebrou um cano e agora tá gastando muita agua alguem me ajuda
+    - o cano do esgoto estourou
+    - o comércio do meu vizinho está com um vazamento e ele não resolve.
+    - O esgoto precisa ser desentupido
+    - Quero reportar um vasamento
+    - Um cano da Cedae rompeu
+    - Vazamentos na minha rua
+    - vejo muita água saindo da construção
+
+- intent: Emitir_SegundaViaConta
+  examples: |
+    - Como consigo pagar minha conta atrasada?
+    - como eu emito um novo boleto?
+    - Não conseguimos a 2ª via
+    - Quero tirar uma segunda via
+    - gostaria de emitir segunda via de pagamento
+    - Desejo imprimir a conta a ser paga
+    - acabei de danificar minha conta não consigo emitir 2 via
+    - seria possível eu pagar uma conta atrasada?
+
+- synonym: tipo_vazamento
+  examples: |
+    - vazamento de água
+    - vazamento de esgoto
+    - água vazando
+    - esgoto vazando
+    - vazou a água
+    - vazou o esgoto

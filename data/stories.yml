@@ -1,0 +1,41 @@
+version: "2.0"
+
+stories:
+- story: General Greetings
+  steps:
+  - intent: General_Greetings
+  - action: utter_General_Greetings
+  - intent: utter_oq_quer_falar
+
+- story: General Ending
+  steps:
+  - intent: General_Ending
+  - action: utter_General_Ending
+
+- story: Emitir 2º via da conta
+  steps:
+  - intent: Emitir_SegundaViaConta
+  - action: utter_Emitir_SegundaViaConta
+  - action: utter_mais_oq_quer_falar
+
+# - story: vazamento água caminho 1
+#   steps:
+#   - intent: Reportar_Vazamento
+#   - action: utter_pergunta_tipo_vazamento
+#     entities:
+#     - tipo_vazamento: "esgoto"
+#     slot_was_set:
+#     - tipo_vazamento: "água"
+#   - action: utter_vazamento_agua
+#   - action: utter_pedir_email
+
+# - story: vazamento esgoto caminho 1
+#   steps:
+#   - intent: Reportar_Vazamento
+#   - action: utter_pergunta_tipo_vazamento
+#     entities:
+#     - tipo_vazamento: "esgoto"
+#     slot_was_set:
+#     - tipo_vazamento: "esgoto"
+#   - action: utter_vazamento_esgoto
+#   - action: utter_pedir_email

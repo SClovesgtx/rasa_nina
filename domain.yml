@@ -1,0 +1,97 @@
+version: "2.0"
+
+intents:
+  - General_Greetings
+  - General_Ending
+  - Reportar_Vazamento
+  - Emitir_SegundaViaConta
+
+responses:
+  utter_General_Greetings:
+  - channel: "telegram"
+    custom:
+      parse_mode: HTML
+      text: | 
+        Olá!!!!<pre>Eu sou a Nina, a atendente virtual da CEDAE. Estou aqui para te ajudar.</pre>Qual o seu nome?
+
+  utter_oq_quer_falar:
+  - channel: "telegram"
+    custom:
+      parse_mode: HTML
+      text: | 
+        Sobre o quê você quer falar?
+
+  utter_mais_oq_quer_falar:
+  - channel: "telegram"
+    custom:
+      parse_mode: HTML
+      text: | 
+        Sobre mais o quê você quer falar?
+
+  utter_General_Ending:
+  - text: | 
+      Obrigada por entrar em contato com a CEDAE. Foi um prazer te atender! Bye, bey.
+    image: "https://media.giphy.com/media/l1J3w5B5A29Rpx0MU/giphy.gif"
+
+
+  utter_Emitir_SegundaViaConta:
+  - channel: "telegram"
+    custom:
+      parse_mode: HTML
+      text: | 
+        Você pode tirar a sua <b>segunda via</b> de conta clicando no botão. Na nova tela, você vai precisar entrar com a matrícula do seu imóvel e seu CPF/CNPJ.<pre></pre>
+        Mas se você estiver com problemas no cadastro do seu CPF/CNPJ, entre em contato diretamente com os nossos atendentes. Eles vão poder te ajudar!<pre></pre>
+        <pre>SAC: <b>0800 28 21 195</b></pre>
+        Surdo-Mudo: <b>0800 28 23 059</b>
+
+  utter_pergunta_tipo_vazamento:
+  - channel: "telegram"
+    custom:
+      parse_mode: HTML
+      text: | 
+        Qual o tipo de vazamento?
+      buttons:
+      - title: "água"
+        payload: "/vazamento de água"
+      - title: "esgoto"
+        payload: "/vazamento de esgoto"
+
+  utter_vazamento_agua:
+  - channel: "telegram"
+    custom:
+      parse_mode: HTML
+      text: | 
+        Qual o local desse vazamento??
+      buttons:
+      - title: "rua"
+        payload: "/rua"
+      - title: "casa"
+        payload: "/casa"
+
+  utter_vazamento_esgoto:
+  - channel: "telegram"
+    custom:
+      parse_mode: HTML
+      text: | 
+        O vazamento está infiltrando a cisterna? 👀
+      buttons:
+      - title: "sim"
+        payload: "/sim"
+      - title: "não"
+        payload: "/não"
+
+  utter_pedir_email:
+  - channel: "telegram"
+    custom:
+      parse_mode: HTML
+      text: Qual o seu e-mail?
+
+
+slots:
+  tipo_vazamento:
+    type: text
+    influence_conversation: false
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

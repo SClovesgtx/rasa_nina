@@ -1,0 +1,13 @@
+version: "2.0"
+
+rules:
+
+- rule: se despedir sempre que o usuário se despedir
+  steps:
+  - intent: General_Greetings
+  - action: utter_General_Greetings
+
+- rule: cumprimentar sempre que que o usuário cumprimentar
+  steps:
+  - intent: General_Ending
+  - action: utter_General_Ending
