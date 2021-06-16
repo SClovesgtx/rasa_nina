@@ -1,6 +1,16 @@
 version: "2.0"
 
 nlu:
+- intent: afirmacao
+  examples: |
+    - sim
+    - yes
+
+- intent: negacao
+  examples: |
+    - não
+    - no
+
 - intent: General_Greetings
   examples: |
     - Boa Noite

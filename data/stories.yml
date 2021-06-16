@@ -16,7 +16,7 @@ stories:
   steps:
   - intent: Emitir_SegundaViaConta
   - action: utter_Emitir_SegundaViaConta
-  - action: utter_mais_oq_quer_falar
+  - action: utter_pergunta_se_resposta_ajudou
 
 # - story: vazamento água caminho 1
 #   steps:
